@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# Creating each of items
+
+['Rock', 'Scissors', 'Paper'].each do |item_name|
+  item = Item.create(name: item_name)
+end
+
+
+# Rules
+
+## Rock beats scissors
+## Scissors beats paper
+## Paper beats rock
+{ rock: :scissors, scissors: :paper, paper: :rock }.each do |winner_key, loser_key|
+  winner_item = Item.find_by(name: Enum::Item.value(winner_key))
+  loser_item = Item.find_by(name: Enum::Item.value(loser_key))
+
+  VictoryRule.create(item_id: winner_item.id, loser_id: loser_item.id)
+end
