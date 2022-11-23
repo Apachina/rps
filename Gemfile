@@ -5,7 +5,7 @@ ruby "3.0.2"
 
 gem "rails", "~> 7.0.2"
 gem "sprockets-rails"
-gem "sqlite3", "~> 1.4"
+gem 'pg', '~> 1.3', '>= 1.3.5'
 gem "puma", "~> 5.0"
 gem "importmap-rails"
 gem "turbo-rails"
@@ -21,6 +21,9 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+
+  # Configuration through .env files
+  gem 'dotenv-rails'
 end
 
 group :development do
