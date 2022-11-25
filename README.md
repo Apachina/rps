@@ -1,24 +1,21 @@
-# README
+# Rock Paper Scissor
+Simple application rock-paper-scissors. Where users play with bot - Curb. For starting just select your bet and wait Curb's bet.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby environment
 
-Things you may want to cover:
+Application requires to use ruby `3.0.2`, rails `7.0.2`
 
-* Ruby version
+### For staring:
+1) run bundler to install gems
+``` bundle ```
+2) create .env file in folder app/, and copy information from .env.example, or set it up yourself.
+``` cp .env.example .env ```
+3) run create database
+``` rake db:create ```
+4) set seeds
+``` rake db:seed ```
+5) run rails server
+``` rails s ```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### For tests checking just run:
+``` rspec ```
