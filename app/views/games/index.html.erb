@@ -12,8 +12,8 @@
       <div class='text-select_bet'> SELECT YOUR BET </div>
 
       <div class='cards'>
-        <% Enum::Item.keys.each do |item_key| %>
-          <%=  render '/cards/show', :locals => { item_key: item_key, with_action: true } %>
+        <% @items.each do |item| %>
+          <%=  render '/cards/show', :locals => { item: item, with_action: true } %>
         <% end %>
       </div>
     </div>

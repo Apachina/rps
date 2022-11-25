@@ -1,10 +1,10 @@
-<div <%= "id=popup_#{locals[:item_key].to_s}" %> class="overlay">
+<div <%= "id=popup_#{locals[:item].name.downcase}" %> class="overlay">
   <div class="popup">
     <div class='title'>WAITING CURB’S CHOOSE</div>
     <a class="close" href="#">&times;</a>
     <div class="content">
       <div class="card-content">
-        <%=  render '/cards/show', :locals => { item_key: locals[:item_key], item_name: 'Your bet', condition: :only_display } %>
+        <%=  render '/cards/show', :locals => { item: locals[:item], item_name: 'Your bet', condition: :only_display } %>
       </div>
       <div class="loader-content">
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>

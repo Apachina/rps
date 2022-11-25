@@ -9,7 +9,6 @@ export default class extends Controller {
       type: 'get',
       data:  { item_name: this.popupTargets[0].classList[1] },
       success: (data) => {
-        console.log(data.attachmentPartial)
         setTimeout(
           function() {
             $('#results-popup' ).empty();
