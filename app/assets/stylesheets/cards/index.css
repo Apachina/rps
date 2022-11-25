@@ -1,0 +1,38 @@
+.card-body {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  height: 273px;
+  width: 240px;
+  text-align: center;
+  color: #36006C;
+  font-size: 29px;
+
+}
+.card-body a {
+  text-decoration: none;
+}
+
+.image {
+  min-height: 140px;
+  width: 63px;
+  margin: 20px auto;
+}
+
+.card-body:hover {
+  background: #F8F8F8 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.rock .image .b {
+  fill: #75a8ed;
+}
+
+.scissors .image .b {
+  fill: #addbae;
+}
+
+.paper .image .b {
+  fill: #f0a8be;
+}

@@ -1,0 +1,24 @@
+<div class='game-index'>
+  <div class='game-index-wrapper'>
+    <div class='head-body'>
+      <div class='title'>
+        ROCK – PAPER – SCISSORS
+      </div>
+      <div class='information'>
+        Rock Paper Scissors is a zero sum game that is usually played by two people using their hands and no tools. The idea is to make shapes with an outstretched hand where each shape will have a certain degree of power and will lead to an outcome.
+      </div>
+    </div>
+    <div class='body'>
+      <div class='text-select_bet'> SELECT YOUR BET </div>
+
+      <div class='cards'>
+        <% Enum::Item.keys.each do |item_key| %>
+          <%=  render '/cards/show', :locals => { item_key: item_key, with_action: true } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="results-popup" class="overlay">
+</div>

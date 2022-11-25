@@ -1,0 +1,37 @@
+.game-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-index-wrapper {
+  width: 800px;
+  margin: auto;
+}
+
+.head-body .title {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #36006C;
+  font-size: 61px;
+  margin: 43px 0px;
+}
+
+.head-body .information {
+  letter-spacing: 0px;
+  color: #000000;
+  font-size: 32px;
+  opacity: 0.54;
+  margin-bottom: 35px;
+}
+
+.body .text-select_bet {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 41px;
+}
+
+.body .cards {
+  display: flex;
+  justify-content: space-between;
+}

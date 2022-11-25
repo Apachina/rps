@@ -1,0 +1,15 @@
+<div class="popup">
+  <% if local_assigns[:data][:draw] %>
+    <div class='title'>DRAW</div>
+    <div class='description'>Curb chose <%= local_assigns[:data][:curb_item].name.downcase %></div>
+  <% else %>
+    <div class='title'>YOU <%= local_assigns[:data][:user_won] ? 'WIN' : 'LOST' %></div>
+    <div class='description'>Curb with <%= local_assigns[:data][:curb_item].name.downcase %> <%= local_assigns[:data][:user_won] ? 'losts' : 'wins' %></div>
+  <% end %>
+  <a class="close" href="#">&times;</a>
+  <div class="content">
+    <div class="card-content">
+      <%=  render '/cards/show', :locals => { item_key: Enum::Item.key(local_assigns[:data][:curb_item][:name]), item_name: '', condition: :only_display } %>
+    </div>
+  </div>
+</div>

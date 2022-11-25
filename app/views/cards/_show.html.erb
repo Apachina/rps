@@ -1,0 +1,13 @@
+<a <%= "href=#popup_#{locals[:item_key].to_s}" unless locals[:condition] == :only_display %> >
+  <div class="<%= "card-body #{locals[:item_key].to_s}" %>" data-controller="games" data-games-target="popup">
+    <div class='card-wraper' <%= locals[:with_action] && "data-action=click->games#chooseItem" %>>
+      <div class='image'>
+        <%= show_svg("#{locals[:item_key].to_s}.svg") %>
+      </div>
+      <div class='item_name'>
+        <%= locals[:item_name] || Enum::Item.value(locals[:item_key]) %>
+      </div>
+    </div>
+    <%= render('/games/waiting_popup', locals: { item_key: locals[:item_key] }) unless locals[:condition] == :only_display %>
+  </div>
+</a>
