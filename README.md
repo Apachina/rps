@@ -12,10 +12,15 @@ Application requires to use ruby `3.0.2`, rails `7.0.2`
 ``` cp .env.example .env ```
 3) run create database
 ``` rake db:create ```
-4) set seeds
+4) run migrate database
+``` rake db:migrate ```
+5) set seeds
 ``` rake db:seed ```
-5) run rails server
+6) run rails server
 ``` rails s ```
 
 ### For tests checking just run:
 ``` rspec ```
+
+*Cover letter:*
+*The emphasis in this work was placed on the back-end part. Since the estimated time is not enough to do with a stable front-end part.*
